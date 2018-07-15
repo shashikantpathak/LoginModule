@@ -25,6 +25,12 @@
  $ npm install random-key-generator
 
 ```
+
+**Install material Ui**
+
+```s
+ $ npm install @material-ui/icons
+ ```
  **Start the Application on web-server**
 
 ```s
