@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import 'whatwg-fetch';
+import ForCompanies from '../Home/forcompanies';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 import {
   getFromStorage,
   setInStorage,
 } from '../../utils/storage';
+import Layout from '../pages/Layout';
 
 class Home extends Component {
   constructor(props) {
@@ -242,6 +246,7 @@ class Home extends Component {
     if (!token) {
       return (
         <div>
+          <Header />
           <div>
             {
               (signInError) ? (
@@ -300,15 +305,16 @@ class Home extends Component {
             /><br />
             <button className='signUPButton' onClick={this.onSignUp}>Sign Up</button>
           </div>
-
+          <Footer />
         </div>
       );
     }
 
     return (
       <div>
-        <p className='home'>Welcome to Code Challenge!</p>
-        <button className='logout' onClick={this.logout}>Logout</button>
+       
+    <Layout/>
+    <button className='logout' onClick={this.logout}>Logout</button>
       </div>
     );
   }
